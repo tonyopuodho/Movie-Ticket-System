@@ -19,11 +19,10 @@ app.use(clerkMiddleware())
 
 // routes
 app.get("/", (request,response) => {
-    console.log(`Server is running on port ${port}`)
-      
+    console.log(`Server is running on port ${port}`)      
 })
 app.use('/api/inngest',serve({client:inngest,functions}))
 
 app.listen(port,() => {
-    console.log("Server is running")
+    console.log("Server is running")    
 })
