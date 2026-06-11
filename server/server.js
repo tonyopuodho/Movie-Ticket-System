@@ -22,7 +22,7 @@ app.get("/", (request,response) => {
     response.json({message:"Server is running"})
     console.log(`Server is running on port ${port}`)      
 })
-app.use('/api/inngest',serve({client:inngest,functions}))
+app.get('/api/inngest',serve({ client:inngest, functions }))
 
 app.listen(port,() => {
     console.log("Server is running")    
